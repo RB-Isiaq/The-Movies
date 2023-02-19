@@ -1,0 +1,26 @@
+.filter {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  margin: 0 auto;
+  color: white;
+}
+h3 {
+  text-align: center;
+}
+.filter div {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.filters {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+}
+select {
+  width: 60px;
+  text-align: center;
+}
