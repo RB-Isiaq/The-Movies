@@ -22,7 +22,7 @@ const Filter = (props) => {
       <div>
         <div className={classes.filters}>
           <label>Year</label>
-          <select value={props.selected} onChange={year} onSelect={filterYear}>
+          <select value={year} onChange={filterYear} onSelect={filterYear}>
             <option value="2023">2023</option>
             <option value="2022">2022</option>
             <option value="2021">2021</option>
@@ -35,11 +35,7 @@ const Filter = (props) => {
         </div>
         <div className={classes.filters}>
           <label>Genre</label>
-          <select
-            value={props.selected}
-            onChange={genre}
-            onSelect={filterGenre}
-          >
+          <select value={genre} onChange={filterGenre} onSelect={filterGenre}>
             <option value="All">Action</option>
             <option value="Drama">Drama</option>
             <option value="Thriller">Thriller</option>

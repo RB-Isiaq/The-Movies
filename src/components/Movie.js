@@ -1,4 +1,4 @@
-import classes from "./Movies.module.css";
+import classes from "./Movie.module.css";
 
 function Movie(props) {
   return (

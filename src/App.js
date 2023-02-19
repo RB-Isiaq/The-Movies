@@ -35,6 +35,7 @@ function App() {
         const ratings = movie.vote_average.toFixed(1);
         const id = movie.id;
         let genre = [];
+        let gen = "";
         const GENRE = `https://api.themoviedb.org/3/movie/${id}?api_key=${API_KEY}&language=en-US`;
 
         async function genres() {
@@ -46,10 +47,10 @@ function App() {
         }
         try {
           genres();
+          gen = genre.toString();
         } catch (error) {
           console.log(error);
         }
-        console.log(genre);
 
         return fetchedMovies.push(
           <Movie
@@ -57,7 +58,7 @@ function App() {
             id={id}
             overview={overview}
             releaseDate={releaseDate}
-            genres={[...genre]}
+            // genres={gen}
             image={image}
             ratings={ratings}
             title={title}
@@ -72,7 +73,7 @@ function App() {
     } catch (error) {
       console.log(error);
     }
-  }, [API_URL, searchMovie, SEARCH, movies, searchInput]);
+  }, [API_URL, searchMovie, SEARCH, movies, searchInput, fetchedMovies]);
 
   const searchHandler = (e) => {
     setSearchInput(e.target.value);
