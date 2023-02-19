@@ -73,7 +73,7 @@ function App() {
     } catch (error) {
       console.log(error);
     }
-  }, [API_URL, searchMovie, SEARCH, movies, searchInput, fetchedMovies]);
+  }, [API_URL, searchMovie, SEARCH, movies, searchInput]);
 
   const searchHandler = (e) => {
     setSearchInput(e.target.value);
