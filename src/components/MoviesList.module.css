@@ -1,24 +1,28 @@
 .movies h2 {
   color: white;
-  margin: 2rem auto;
+  margin: 3rem auto 1rem;
   text-align: center;
-  text-transform: uppercase;
+  text-transform: capitalize;
+  font-size: 30px;
 }
 .movies div {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  padding: 20px;
-  /* gap: 15px; */
-  /* width: 100vw; */
+  margin: 10px auto;
+  padding: 10px 10px 15px;
 }
-.movies ul {
+ul {
   list-style: none;
   margin: 0;
   padding: 0;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
-  gap: 10px;
+  gap: 25px;
+}
+li {
+  margin: 10px auto;
+  padding: 10px auto;
 }

@@ -4,7 +4,7 @@ function SearchBar(props) {
   return (
     <form className={classes["search-container"]} onSubmit={props.onSubmit}>
       <input
-        type="text"
+        type="search"
         id="search"
         placeholder="Search"
         onChange={props.onChange}

@@ -10,6 +10,12 @@ html {
 
 body {
   margin: 0;
-  background-color: #3f3f3f;
+  background-color: #444343;
   color: white;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+  font-size: 17px;
 }

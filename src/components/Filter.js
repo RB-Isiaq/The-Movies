@@ -1,46 +1,37 @@
-import React, { useState } from "react";
+import React from "react";
 
 import classes from "./Filter.module.css";
 
 const Filter = (props) => {
-  const [year, setYear] = useState("");
-  const [genre, setGenre] = useState("");
-  const filterYear = (e) => {
-    setYear(e.target.value);
-    const filteredYear = e.target.value;
-    console.log(filteredYear);
-  };
-  const filterGenre = (e) => {
-    setGenre(e.target.value);
-    const filteredGenre = e.target.value;
-    console.log(filteredGenre);
-  };
-
   return (
     <div className={classes.filter}>
-      <h3>FIlter movies by</h3>
+      <h3>Filter movies by</h3>
       <div>
         <div className={classes.filters}>
           <label>Year</label>
-          <select value={year} onChange={filterYear} onSelect={filterYear}>
+          <select value={props.yearValue} onChange={props.onChangeYear}>
+            <option value="">All</option>
             <option value="2023">2023</option>
             <option value="2022">2022</option>
             <option value="2021">2021</option>
             <option value="2020">2020</option>
             <option value="2019">2019</option>
-            <option value="2019">2018</option>
-            <option value="2019">2017</option>
-            <option value="2019">2016</option>
+            <option value="2018">2018</option>
+            <option value="2017">2017</option>
+            <option value="2016">2016</option>
           </select>
         </div>
         <div className={classes.filters}>
-          <label>Genre</label>
-          <select value={genre} onChange={filterGenre} onSelect={filterGenre}>
-            <option value="All">Action</option>
-            <option value="Drama">Drama</option>
-            <option value="Thriller">Thriller</option>
-            <option value="Comedy">Comedy</option>
-            <option value="Adventure">Adventure</option>
+          <label>Ratings</label>
+          <select value={props.ratingValue} onChange={props.onChangeRating}>
+            <option value="">All</option>
+            <option value="10">10</option>
+            <option value="9">9+</option>
+            <option value="8">8+</option>
+            <option value="7">7+</option>
+            <option value="6">6+</option>
+            <option value="5">5+</option>
+            <option value="4">4+</option>
           </select>
         </div>
       </div>

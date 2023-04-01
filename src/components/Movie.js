@@ -8,11 +8,12 @@ function Movie(props) {
       </div>
       <div className={classes.div2}>
         <h2>{props.title}</h2>
-        <h5>{props.genres}</h5>
         <h4>Release date: {props.releaseDate}</h4>
         <h4>Ratings: {props.ratings}</h4>
-        <p>{props.overview}</p>
       </div>
+      <button type="button" onClick={props.getMovieDetails} id={props.id}>
+        Show Movie
+      </button>
     </div>
   );
 }
