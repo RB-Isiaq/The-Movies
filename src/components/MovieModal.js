@@ -26,7 +26,7 @@ function MovieModal(props) {
         <div className={styles.div2}>
           <h2>{props.title}</h2>
           <h4>Genres: {props.genres}</h4>
-          <h4>Release date: {props.releaseDate}</h4>
+          <h4>Released date: {props.releaseDate}</h4>
           <h4>Duration: {props.duration}</h4>
           <h4>Ratings: {props.ratings}</h4>
           <p>{props.overview}</p>

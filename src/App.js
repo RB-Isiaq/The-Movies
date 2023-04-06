@@ -47,13 +47,10 @@ function App() {
         const tagline = data.tagline;
         const backdrop = `${IMG_URL}${data.backdrop_path}`;
         const image = `${IMG_URL}${data.poster_path}`;
-	const video = data.video;
+        const video = data.video;
         const ratings = data.vote_average.toFixed(1);
         const genres = data.genres.map((r) => r.name);
         const genre = genres.join(", ");
-	      console.log(data)
-	      console.log(data.video)
-	      console.log(video)
         return (
           <MovieModal
             key={id}

@@ -6,7 +6,7 @@ The application was built using reactJs.
 
 ## Resources
 
-- #### [Live Link](https://the-popular-movies.netlify.app)
+- #### [Live Link](https://the-movies-one.vercel.app/)
 
 ## Requirements
 
