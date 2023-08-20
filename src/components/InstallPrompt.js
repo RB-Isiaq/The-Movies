@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import styles from "./InstallPrompt.module.css";
 
 const InstallPrompt = () => {
   const [installPromptEvent, setInstallPromptEvent] = useState(null);
@@ -32,8 +33,7 @@ const InstallPrompt = () => {
   };
 
   return (
-    <div>
-      {/* Your app content */}
+    <div className={styles.install}>
       {installPromptEvent && (
         <button onClick={handleInstallClick}>Install App</button>
       )}
