@@ -6,6 +6,7 @@ import Filter from "./components/Filter";
 import Movie from "./components/Movie";
 import MoviesList from "./components/MoviesList";
 import MovieModal from "./components/MovieModal";
+import InstallPrompt from "./components/InstallPrompt";
 
 function App() {
   const [searchInput, setSearchInput] = useState("");
@@ -47,7 +48,6 @@ function App() {
         const tagline = data.tagline;
         const backdrop = `${IMG_URL}${data.backdrop_path}`;
         const image = `${IMG_URL}${data.poster_path}`;
-        const video = data.video;
         const ratings = data.vote_average.toFixed(1);
         const genres = data.genres.map((r) => r.name);
         const genre = genres.join(", ");
@@ -180,6 +180,7 @@ function App() {
 
   return (
     <Fragment>
+      <InstallPrompt />
       {!showSingleMovie && <Layout />}
       {!showSingleMovie && (
         <SearchBar

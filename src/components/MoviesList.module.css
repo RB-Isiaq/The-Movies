@@ -19,8 +19,8 @@ ul {
   padding: 0;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-evenly;
-  gap: 25px;
+  justify-content: center;
+  gap: 5px;
 }
 li {
   margin: 10px auto;
