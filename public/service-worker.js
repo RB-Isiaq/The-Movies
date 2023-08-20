@@ -1,14 +1,7 @@
-/* eslint-disable no-restricted-globals */
+const CACHE_NAME = "The-Movies";
+const urlsToCache = ["/", "/index.html", "/offline.html", "/offline.css"];
 
-const CACHE_NAME = "The Movies";
-const urlsToCache = [
-  "/",
-  "/index.html",
-  "/offline.html",
-  "/offline.css",
-  "/index.css",
-  "/index.js",
-];
+const self = this;
 
 // Install event: Cache the app shell and assets
 self.addEventListener("install", (event) => {

@@ -8,6 +8,7 @@ const InstallPrompt = () => {
     const handleBeforeInstallPrompt = (event) => {
       event.preventDefault();
       setInstallPromptEvent(event);
+      console.log(installPromptEvent);
     };
 
     window.addEventListener("beforeinstallprompt", handleBeforeInstallPrompt);
@@ -18,7 +19,7 @@ const InstallPrompt = () => {
         handleBeforeInstallPrompt
       );
     };
-  }, []);
+  }, [installPromptEvent]);
 
   const handleInstallClick = () => {
     if (installPromptEvent) {
@@ -27,6 +28,7 @@ const InstallPrompt = () => {
         if (choiceResult.outcome === "accepted") {
           console.log("User accepted the install prompt");
         }
+        console.log(installPromptEvent);
         setInstallPromptEvent(null);
       });
     }
