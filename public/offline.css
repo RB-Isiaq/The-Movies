@@ -1,0 +1,11 @@
+.offline-paragraph {
+  width: 100%;
+  max-width: 300px;
+  bottom: 0;
+  margin: 47vh auto 0;
+  padding: 20px;
+  text-align: center;
+  background: black;
+  color: white;
+  border-radius: 10px;
+}

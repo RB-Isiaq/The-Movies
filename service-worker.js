@@ -1,12 +1,13 @@
 /* eslint-disable no-restricted-globals */
 
-const CACHE_NAME = "my-pwa-cache-v1";
+const CACHE_NAME = "The Movies";
 const urlsToCache = [
   "/",
   "/index.html",
-  "/styles.css",
-  "/script.js",
-  // Add more URLs to cache
+  "/offline.html",
+  "/offline.css",
+  "/index.css",
+  "/index.js",
 ];
 
 // Install event: Cache the app shell and assets
@@ -22,7 +23,12 @@ self.addEventListener("install", (event) => {
 self.addEventListener("fetch", (event) => {
   event.respondWith(
     caches.match(event.request).then((response) => {
-      return response || fetch(event.request);
+      return (
+        response ||
+        fetch(event.request).catch(() => {
+          return caches.match("/offline.html");
+        })
+      );
     })
   );
 });
